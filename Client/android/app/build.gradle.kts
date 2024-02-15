@@ -58,8 +58,8 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.50")
 
     //navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     // ViewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
@@ -95,6 +95,7 @@ dependencies {
 
     // Coil
     implementation ("io.coil-kt:coil:2.4.0")
+
 
 
 

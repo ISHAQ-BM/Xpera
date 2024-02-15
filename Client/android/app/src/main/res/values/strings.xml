@@ -35,4 +35,8 @@
     <string name="user_profile_picture">User profile picture</string>
     <string name="notification_alert">Notification alert</string>
     <string name="create_new_post">Create new post</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="Bookmark">Bookmark</string>
+    <string name="profile">Profile</string>
 </resources>
