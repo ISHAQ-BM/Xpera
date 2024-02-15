@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Toast
 import com.example.xpera.core.Utils.Companion.ErrorCode
 import androidx.activity.result.IntentSenderRequest
@@ -16,6 +18,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.xpera.R
 import com.example.xpera.core.CREDENTIAL_INCORRECT_MESSAGE
 import com.example.xpera.core.NO_EMAIL_FOUND_MESSAGE
+import com.example.xpera.core.NO_INTERNET_MESSAGE
 import com.example.xpera.core.RESET_PASSWORD_MESSAGE
 import com.example.xpera.core.Resource
 import com.example.xpera.core.UNKNOWN_ERROR_MESSAGE
@@ -66,8 +69,18 @@ class LoginFragment : Fragment() {
                 viewModel.oneTapSignIn()
             }
 
+
             forgotPassword.setOnClickListener {
-                viewModel.sendPasswordResetEmail("ishaqmehdi60@gmail.com")
+                val email = binding?.email?.text?.trim().toString()
+                if (email.trim().isEmpty()) {
+                    binding?.inputLayoutEmail?.error = "Required."
+                } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    binding?.inputLayoutEmail?.error = "Incorrect format."
+                } else {
+                    binding?.inputLayoutEmail?.error = null
+                    binding?.inputLayoutEmail?.clearFocus()
+                    viewModel.sendPasswordResetEmail(email)
+                }
             }
 
             signup.setOnClickListener {
@@ -145,6 +158,8 @@ class LoginFragment : Fragment() {
                         hideProgressbar()
                         if (it.error == ErrorCode.INVALID_CREDENTIAL_ERROR) {
                             Toast.makeText(requireContext(), CREDENTIAL_INCORRECT_MESSAGE,Toast.LENGTH_SHORT).show()
+                        }else if (it.error == ErrorCode.NO_INTERNET_ERROR) {
+                            Toast.makeText(requireContext(), NO_INTERNET_MESSAGE,Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
@@ -185,8 +200,8 @@ class LoginFragment : Fragment() {
 
     private fun hideProgressbar() {
         binding?.apply {
-            progressIndicator.visibility = View.INVISIBLE
-            grayOverlay.visibility =View.INVISIBLE
+            progressIndicator.visibility = View.GONE
+            grayOverlay.visibility =View.GONE
         }
     }
 

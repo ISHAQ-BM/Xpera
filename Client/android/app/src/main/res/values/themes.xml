@@ -2,8 +2,13 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Xpera" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/blue</item>
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+
+
+
+        <item name="textInputStyle">@style/Widget.Xpera.TextInputLayout.OutlinedBox</item>
+        <item name="checkboxStyle">@style/Widget.Xpera.CheckBox</item>
 
     </style>
 

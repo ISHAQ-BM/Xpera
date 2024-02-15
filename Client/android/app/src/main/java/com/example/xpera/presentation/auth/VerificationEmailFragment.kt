@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.xpera.R
@@ -35,6 +36,10 @@ class VerificationEmailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+
+
 
         binding?.apply {
 
@@ -91,6 +96,9 @@ class VerificationEmailFragment : Fragment() {
     private fun openEmailApp() {
         val intent = Intent(Intent.ACTION_MAIN)
         intent.addCategory(Intent.CATEGORY_APP_EMAIL)
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+        intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
         try {
             startActivity(Intent.createChooser(intent, "Choose your Email App"))
         } catch (e: ActivityNotFoundException) {
@@ -117,6 +125,8 @@ class VerificationEmailFragment : Fragment() {
         super.onDestroyView()
         binding = null
     }
+
+
 
 
 }

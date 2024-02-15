@@ -1,10 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Widget.Xpera.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeErrorColor">@color/md_theme_light_error</item>
+        <item name="errorIconTint">@color/md_theme_light_error</item>
+        <item name="errorTextColor">@color/md_theme_light_error</item>
+        <item name="errorIconDrawable">@android:drawable/stat_notify_error</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_10sdp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_48sdp</item>
+        <item name="hintEnabled">false</item>
+        </style>
+
+    <style name="Widget.Xpera.TextInputEditText" parent="">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Widget.Xpera.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_48sdp</item>
+        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/_8sdp</item>
+        <item name="iconTintMode">add</item>
+        <item name="iconTint">@android:color/transparent</item>
+        <item name="strokeWidth">@dimen/_2sdp</item>
+        <item name="strokeColor">@color/md_theme_light_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="Widget.Xpera.Button.ContainedButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_48sdp</item>
+        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/_8sdp</item>
+        <item name="iconTintMode">add</item>
+        <item name="iconTint">@android:color/transparent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="TextAppearance.Xpera.Text" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/nunito_regular</item>
+    </style>
+    <style name="TextAppearance.Xpera.Title3" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+    </style>
+    <style name="TextAppearance.Xpera.Caption" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10.2sp</item>
+        <item name="android:fontFamily">@font/nunito_regular</item>
+    </style>
+    <style name="TextAppearance.Xpera.CaptionBold" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10.2sp</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+    </style>
+    <style name="TextAppearance.Xpera.SubHeading" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+    </style>
     <style name="Theme.Xpera.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="postSplashScreenTheme">@style/Theme.Xpera</item>
-
-
+    </style>
+    <style name="Widget.Xpera.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.Xpera.Text</item>
+        <item name="android:textColor">@color/grey_9</item>
+        <item name="buttonTint">@color/md_theme_light_primary</item>
     </style>
 </resources>

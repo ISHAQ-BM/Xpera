@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Xpera</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="become_a_member">Become a member.</string>
     <string name="welcome_back">Welcome back!</string>
@@ -29,4 +28,11 @@
     <string name="congratulations_you_have_been_n_successfully_authenticated">Congratulations! You have been\n successfully authenticated</string>
     <string name="link_not_received_or_expired">Link not received or Expired ?</string>
     <string name="resend_again"><u>Resend again</u></string>
+    <string name="open_menu">Open menu</string>
+    <string name="add_a_comment">Add a comment</string>
+    <string name="like_this">Like this</string>
+    <string name="add_to_bookmarks">Add to bookmarks</string>
+    <string name="user_profile_picture">User profile picture</string>
+    <string name="notification_alert">Notification alert</string>
+    <string name="create_new_post">Create new post</string>
 </resources>

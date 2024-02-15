@@ -2,6 +2,9 @@ package com.example.xpera.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.ActionMode
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
@@ -21,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+
+
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
@@ -30,5 +36,8 @@ class MainActivity : AppCompatActivity() {
         else if (viewModel.isUserAuthenticated && !viewModel.isEmailVerified)
             navController.navigate(R.id.verificationEmailFragment)
 
+
     }
+
+
 }

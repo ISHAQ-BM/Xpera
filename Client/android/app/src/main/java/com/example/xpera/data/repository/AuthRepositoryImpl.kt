@@ -31,6 +31,7 @@ import javax.inject.Inject
 import javax.inject.Named
 
 class AuthRepositoryImpl @Inject constructor(
+
     private val oneTapClient: SignInClient,
     @Named(SIGN_IN_REQUEST)
     private val signUpRequest: BeginSignInRequest,
