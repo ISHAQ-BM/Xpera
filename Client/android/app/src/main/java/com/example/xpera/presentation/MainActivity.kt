@@ -10,8 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.xpera.R
 import com.example.xpera.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.ismaeldivita.chipnavigation.ChipNavigationBar
+
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

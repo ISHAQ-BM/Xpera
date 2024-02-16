@@ -45,7 +45,7 @@
             android:label="fragment_home"
             tools:layout="@layout/fragment_home" />
         <fragment
-            android:id="@+id/homeSearch"
+            android:id="@+id/searchFragment"
             android:name="com.example.xpera.presentation.search.SearchFragment"
             android:label="fragment_search"
             tools:layout="@layout/fragment_search" />
@@ -55,7 +55,7 @@
             android:label="fragment_bookmark"
             tools:layout="@layout/fragment_bookmark" />
         <fragment
-            android:id="@+id/ProfileFragment"
+            android:id="@+id/profileFragment"
             android:name="com.example.xpera.presentation.profile.ProfileFragment"
             android:label="fragment_profile"
             tools:layout="@layout/fragment_profile" />

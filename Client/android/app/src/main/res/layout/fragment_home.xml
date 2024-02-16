@@ -10,13 +10,13 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_115sdp"
-        app:elevation="0dp"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlways">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:contentDescription="@string/create_new_post"
-                     />
+                    />
                 <ImageView
                     android:id="@+id/notification"
                     android:layout_width="wrap_content"
@@ -72,29 +72,32 @@
                     android:contentDescription="@string/notification_alert" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.google.android.material.tabs.TabLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                app:tabSelectedTextColor="@color/white"
-                app:tabIndicatorColor="@color/white"
-                app:tabIndicatorFullWidth="false"
-                android:paddingHorizontal="@dimen/_10sdp"
-                android:clipToPadding="false"
-                android:paddingVertical="@dimen/_4sdp"
-                android:background="@android:color/transparent"
-                />
+
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/post_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="scrollable"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:clipToPadding="false"
+            android:paddingVertical="@dimen/_4sdp"
+            android:background="@android:color/transparent"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
+        android:id="@+id/post_viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/top_rounded_rectangle"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_marginBottom="-24dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 
 

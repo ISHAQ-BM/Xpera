@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="24dp"
+    app:cardBackgroundColor="@color/grey_200"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.home.PostFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/post_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+</androidx.cardview.widget.CardView>

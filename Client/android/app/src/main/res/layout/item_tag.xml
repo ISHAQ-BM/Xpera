@@ -3,6 +3,7 @@
     style="@style/TextAppearance.Xpera.Caption"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="RtlHardcoded"
+    android:id="@+id/tag"
     android:textColor="@color/grey_7"
     android:background="@drawable/tag_bg"
     android:paddingHorizontal="16dp"
