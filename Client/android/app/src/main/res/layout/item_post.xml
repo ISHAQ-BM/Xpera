@@ -109,28 +109,41 @@
                 android:layout_width="match_parent"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:gravity="center"
+                android:text="10"
                 app:drawableTopCompat="@drawable/ic_comment"
                 app:layout_constraintBottom_toTopOf="@id/post_favorite"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
-            <TextView
+            <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/post_favorite"
                 style="@style/TextAppearance.Xpera.Caption"
                 android:layout_width="match_parent"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:gravity="center"
-                app:drawableTopCompat="@drawable/ic_favorite"
+                android:text="110"
+                android:stateListAnimator="@animator/scale"
+                android:button="@null"
+                android:checked="false"
+                android:background="@null"
+                android:textAlignment="center"
+                app:drawableTopCompat="@drawable/favorite_selector"
                 app:layout_constraintBottom_toTopOf="@id/post_bookmark"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
-            <TextView
+            <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/post_bookmark"
                 style="@style/TextAppearance.Xpera.Caption"
                 android:layout_width="match_parent"
                 android:gravity="center"
-                app:drawableTopCompat="@drawable/ic_bookmark_outlined"
+                android:button="@null"
+                android:text="236"
+                android:stateListAnimator="@animator/scale"
+                android:checked="false"
+                android:background="@null"
+                android:textAlignment="center"
+                app:drawableTopCompat="@drawable/bookmark_selector"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />

@@ -28,10 +28,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        val fragment = HomeFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.nav_host_fragment, fragment)
-        transaction.commit()
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -50,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 when (it) {
 
                     R.id.homeFragment -> {
+                        val fragment = HomeFragment()
                         val transaction = supportFragmentManager.beginTransaction()
                         transaction.replace(R.id.nav_host_fragment, fragment)
                         transaction.commit()

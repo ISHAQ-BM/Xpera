@@ -28,6 +28,22 @@ class PostAdapter() : ListAdapter<Post, PostAdapter.ViewHolder>(DiffCallback) {
             val adapter = TagAdapter()
             binding.tagRecyclerView.adapter=adapter
             adapter.submitList(post.tags)
+            binding.postFavorite.setOnCheckedChangeListener { buttonView, isChecked ->
+                if (isChecked) {
+                    buttonView.text=buttonView.text.toString().toInt().plus(1).toString()
+                } else {
+                    buttonView.text=buttonView.text.toString().toInt().minus(1).toString()
+
+                }
+            }
+            binding.postBookmark.setOnCheckedChangeListener{ buttonView, isChecked ->
+                if (isChecked) {
+                    buttonView.text=buttonView.text.toString().toInt().plus(1).toString()
+                } else {
+                    buttonView.text=buttonView.text.toString().toInt().minus(1).toString()
+
+                }
+            }
         }
 
 
