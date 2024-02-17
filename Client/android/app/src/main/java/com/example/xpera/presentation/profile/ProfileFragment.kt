@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.xpera.R
-
 import com.example.xpera.databinding.FragmentProfileBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

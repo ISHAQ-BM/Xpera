@@ -10,6 +10,10 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.xpera.R
 import com.example.xpera.databinding.ActivityMainBinding
+import com.example.xpera.presentation.bookmark.BookmarkFragment
+import com.example.xpera.presentation.home.HomeFragment
+import com.example.xpera.presentation.profile.ProfileFragment
+import com.example.xpera.presentation.search.SearchFragment
 
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,6 +28,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+        val fragment = HomeFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.nav_host_fragment, fragment)
+        transaction.commit()
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
@@ -33,7 +42,39 @@ class MainActivity : AppCompatActivity() {
         else if (viewModel.isUserAuthenticated && !viewModel.isEmailVerified)
             navController.navigate(R.id.verificationEmailFragment)
 
-        binding?.bottomNavBar?.setupWithNavController(navController)
+        //binding?.bottomNavBar?.setupWithNavController(navController)
+        binding?.apply {
+            bottomNavBar.setItemSelected(R.id.homeFragment)
+
+            bottomNavBar.setOnItemSelectedListener {
+                when (it) {
+
+                    R.id.homeFragment -> {
+                        val transaction = supportFragmentManager.beginTransaction()
+                        transaction.replace(R.id.nav_host_fragment, fragment)
+                        transaction.commit()
+                    }
+                    R.id.searchFragment -> {
+                        val favoriteFragment = SearchFragment()
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.nav_host_fragment, favoriteFragment).commit()
+
+                    }
+                    R.id.profileFragment -> {
+                        val profileFragment = ProfileFragment()
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.nav_host_fragment, profileFragment).commit()
+                    }
+                    R.id.bookmarkFragment -> {
+                        val bookmarkFragment = BookmarkFragment()
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.nav_host_fragment, bookmarkFragment).commit()
+                    }
+                }
+            }
+        }
+
+
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {

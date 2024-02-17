@@ -17,7 +17,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.xpera"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -95,6 +95,8 @@ dependencies {
 
     // Coil
     implementation ("io.coil-kt:coil:2.4.0")
+
+    implementation ("com.github.ismaeldivita:chip-navigation-bar:1.4.0")
 
 
 

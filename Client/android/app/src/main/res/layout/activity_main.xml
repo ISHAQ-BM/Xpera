@@ -19,11 +19,13 @@
         app:layout_constraintBottom_toTopOf="@id/bottom_nav_bar"
         />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
         android:id="@+id/bottom_nav_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:menu="@menu/bottom_nav_menu"
+        app:cnb_menuResource="@menu/bottom_nav_menu"
+        app:cnb_animationDuration="175"
+        android:paddingVertical="@dimen/_8sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
